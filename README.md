@@ -38,7 +38,7 @@ make setup      # Creates .env, installs deps, refreshes auth
 make jupyter    # Start notebook server
 ```
 
-See [RUNBOOK.md](RUNBOOK.md) for detailed setup, deployment, and troubleshooting.
+See [docs/operations.md](docs/operations.md) for detailed setup, deployment, and troubleshooting.
 
 ## Resources
 

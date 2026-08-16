@@ -1,6 +1,4 @@
-# RUNBOOK.md — Operations & Setup
-
-Single source of truth for installing, configuring, running, deploying, and troubleshooting this project.
+# Operations Guide
 
 ## Prerequisites
 
@@ -72,7 +70,7 @@ Work through notebooks in order — each builds on the previous.
 | `make deploy` | Deploy bundle to dev target |
 | `make clean` | Remove venv and Python caches |
 
-## Deployment (Optional)
+## Deployment
 
 Deploy all bundle resources (experiments + jobs) to the workspace:
 
@@ -104,6 +102,40 @@ databricks bundle run run_03_tracing
 ├── Makefile                    # Dev workflow commands
 ├── env_template                # .env template
 └── .env                        # Local config (not committed)
+```
+
+## Architecture
+
+### Client Factory (`src/utils/clnt_utils.py`)
+
+Shared across all notebooks. Provider controlled by env vars:
+- **OpenAI** — `USE_DATABRICKS_CLIENT=False`, `USE_DATABRICKS_AI_GATEWAY=False`
+- **Databricks workspace** — `USE_DATABRICKS_CLIENT=True`
+- **Databricks AI Gateway** — `USE_DATABRICKS_AI_GATEWAY=True` (default)
+
+### Key MLflow 3.x Patterns
+
+**Tracing:**
+```python
+mlflow.openai.autolog()              # Auto-trace OpenAI calls
+mlflow.langchain.autolog()           # Auto-trace LangChain/LangGraph
+mlflow.crewai.autolog()              # Auto-trace CrewAI
+@mlflow.trace                        # Trace a function
+with mlflow.start_span("name"):      # Manual span
+```
+
+**Evaluation (3.x API):**
+```python
+from mlflow.genai.scorers import Correctness, RelevanceToQuery, Safety, Guidelines
+results = mlflow.genai.evaluate(data=dataset, scorers=[...])
+results = mlflow.genai.evaluate(data=dataset, predict_fn=my_fn, scorers=[...])
+```
+
+**Agent-as-a-Judge:**
+```python
+from mlflow.genai.judges import make_judge
+judge = make_judge(name="...", instructions="...{{ trace }}...", model="databricks/...")
+feedback = judge(trace=mlflow.get_trace(trace_id))
 ```
 
 ## Troubleshooting
