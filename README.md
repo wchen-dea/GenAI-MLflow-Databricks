@@ -1,16 +1,19 @@
-# MLflow GenAI Demo Series
+# GenAI with MLflow on Databricks
 
-A twelve-notebook series demos MLflow's GenAI platform — from first traced run through multi-agent orchestration. Built on **MLflow 3.14.0** and deployed as a [Databricks Asset Bundle](https://docs.databricks.com/dev-tools/bundles/index.html) for declarative, version-controlled automation of experiments and jobs.
+A twelve-notebook demo series covering MLflow's GenAI platform end-to-end — from first traced LLM call through multi-agent orchestration. Deployed as a [Databricks Asset Bundle](https://docs.databricks.com/dev-tools/bundles/index.html) for declarative, version-controlled automation of experiments and jobs.
 
-## What You'll Learn
+## Tech Stack
 
-- Experiment tracking and cost monitoring for LLM applications
-- Auto-tracing and manual instrumentation with MLflow Tracing
-- Prompt versioning via the Prompt Registry
-- Evaluation with built-in scorers, custom scorers, and DeepEval
-- Prompt optimization using the GEPA algorithm
-- End-to-end RAG with RAGAS evaluation
-- Multi-agent patterns: LangGraph supervisor, deep agents, CrewAI crews
+| Layer | Technology |
+|-------|------------|
+| LLM Ops | MLflow 3.14.0 (tracing, evaluation, prompt registry) |
+| Orchestration | LangChain, LangGraph, CrewAI, OpenAI Agents SDK |
+| Evaluation | MLflow GenAI Scorers, DeepEval, RAGAS |
+| Optimization | GEPA (prompt optimization) |
+| RAG | LlamaIndex, LangChain retrievers |
+| Infrastructure | Databricks Asset Bundles, AI Gateway |
+| Package Management | UV, Python 3.11+ |
+
 
 ## Notebooks
 
