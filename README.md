@@ -1,6 +1,6 @@
 # MLflow GenAI Demo Series
 
-A twelve-notebook series teaching MLflow's GenAI platform — from first traced run through multi-agent orchestration. Built on **MLflow 3.14.0** with Databricks workspace integration.
+A twelve-notebook series demos MLflow's GenAI platform — from first traced run through multi-agent orchestration. Built on **MLflow 3.14.0** and deployed as a [Databricks Asset Bundle](https://docs.databricks.com/dev-tools/bundles/index.html) for declarative, version-controlled automation of experiments and jobs.
 
 ## What You'll Learn
 
