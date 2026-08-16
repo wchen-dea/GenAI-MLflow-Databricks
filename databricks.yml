@@ -1,0 +1,21 @@
+bundle:
+  name: genai-with-mlflow-on-databricks
+include:
+- resources/*.yml
+variables:
+  serving_endpoint_chat:
+    description: Databricks serving endpoint for chat completions
+    default: jsd-gpt-5-2
+  serving_endpoint_embedding:
+    description: Databricks serving endpoint for embeddings
+    default: jsd-text-embedding-3-small
+workspace:
+  root_path: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-baff2b7f-4402.cloud.databricks.com
+      auth_type: databricks-cli
+      profile: DEFAULT

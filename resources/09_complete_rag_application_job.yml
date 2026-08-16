@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    run_09_rag:
+      name: 09-complete-rag-application
+      tasks:
+      - task_key: run_notebook
+        notebook_task:
+          notebook_path: ../src/notebooks/09_complete_rag_application.ipynb
+          source: WORKSPACE

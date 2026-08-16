@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    run_03_tracing:
+      name: 03-introduction-to-tracing
+      tasks:
+      - task_key: run_notebook
+        notebook_task:
+          notebook_path: ../src/notebooks/03_introduction_to_tracing.ipynb
+          source: WORKSPACE

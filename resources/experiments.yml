@@ -1,0 +1,26 @@
+resources:
+  experiments:
+    exp_01_setup:
+      name: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks/01-setup-and-introduction
+    exp_02_tracking:
+      name: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks/02-experiment-tracking
+    exp_03_tracing:
+      name: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks/03-introduction-to-tracing
+    exp_04_manual_tracing:
+      name: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks/04-manual-tracing-advanced
+    exp_05_prompts:
+      name: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks/05-prompt-management
+    exp_06_frameworks:
+      name: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks/06-framework-integrations
+    exp_07_evaluation:
+      name: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks/07-agent-evaluation
+    exp_08_optimization:
+      name: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks/08-prompt-optimization
+    exp_09_rag:
+      name: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks/09-complete-rag-application
+    exp_10_multi_agent:
+      name: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks/10-multi-agent-supervisor
+    exp_11_deep_agents:
+      name: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks/11-deep-agents-langgraph
+    exp_12_crewai:
+      name: /Users/${workspace.current_user.userName}/genai-with-mlflow-on-databricks/12-crewai-multi-agent

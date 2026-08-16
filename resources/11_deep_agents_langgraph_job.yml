@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    run_11_deep_agents:
+      name: 11-deep-agents-langgraph
+      tasks:
+      - task_key: run_notebook
+        notebook_task:
+          notebook_path: ../src/notebooks/11_deep_agents_langgraph.ipynb
+          source: WORKSPACE

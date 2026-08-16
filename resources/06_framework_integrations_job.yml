@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    run_06_frameworks:
+      name: 06-framework-integrations
+      tasks:
+      - task_key: run_notebook
+        notebook_task:
+          notebook_path: ../src/notebooks/06_framework_integrations.ipynb
+          source: WORKSPACE

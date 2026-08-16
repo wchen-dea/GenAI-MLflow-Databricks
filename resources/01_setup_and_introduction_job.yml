@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    run_01_setup:
+      name: 01-setup-and-introduction
+      tasks:
+      - task_key: run_notebook
+        notebook_task:
+          notebook_path: ../src/notebooks/01_setup_and_introduction.ipynb
+          source: WORKSPACE

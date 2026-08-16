@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    run_08_optimization:
+      name: 08-prompt-optimization
+      tasks:
+      - task_key: run_notebook
+        notebook_task:
+          notebook_path: ../src/notebooks/08_prompt_optimization.ipynb
+          source: WORKSPACE

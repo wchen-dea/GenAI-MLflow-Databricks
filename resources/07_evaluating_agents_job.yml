@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    run_07_evaluation:
+      name: 07-evaluating-agents
+      tasks:
+      - task_key: run_notebook
+        notebook_task:
+          notebook_path: ../src/notebooks/07_evaluating_agents.ipynb
+          source: WORKSPACE

@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    run_04_manual_tracing:
+      name: 04-manual-tracing-advanced
+      tasks:
+      - task_key: run_notebook
+        notebook_task:
+          notebook_path: ../src/notebooks/04_manual_tracing_advanced.ipynb
+          source: WORKSPACE

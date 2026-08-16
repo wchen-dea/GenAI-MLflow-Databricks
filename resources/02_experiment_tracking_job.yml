@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    run_02_tracking:
+      name: 02-experiment-tracking
+      tasks:
+      - task_key: run_notebook
+        notebook_task:
+          notebook_path: ../src/notebooks/02_experiment_tracking.ipynb
+          source: WORKSPACE

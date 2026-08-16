@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    run_05_prompts:
+      name: 05-prompt-management
+      tasks:
+      - task_key: run_notebook
+        notebook_task:
+          notebook_path: ../src/notebooks/05_prompt_management.ipynb
+          source: WORKSPACE

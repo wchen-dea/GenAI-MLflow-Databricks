@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    run_10_multi_agent:
+      name: 10-multi-agent-supervisor
+      tasks:
+      - task_key: run_notebook
+        notebook_task:
+          notebook_path: ../src/notebooks/10_multi_agent_supervisor.ipynb
+          source: WORKSPACE

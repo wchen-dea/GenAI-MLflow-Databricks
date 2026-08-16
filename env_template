@@ -1,0 +1,22 @@
+# MLflow GenAI Demo Configuration
+# Uses Databricks platform via .databrickscfg profile (OAuth auth)
+
+# Databricks workspace (must match a profile in ~/.databrickscfg)
+DATABRICKS_HOST=<YOUR_DATABRICKS_HOST>
+DATABRICKS_PROFILE=DEFAULT
+
+# MLflow tracks to Databricks workspace
+MLFLOW_TRACKING_URI=databricks
+
+# AI Gateway via Databricks serving endpoints
+USE_DATABRICKS_AI_GATEWAY=True
+USE_DATABRICKS_CLIENT=False
+AI_GATEWAY_BASE_URL=<YOUR_DATABRICKS_HOST>/serving-endpoints
+AI_GATEWAY_MODELS=<chat-endpoint>,<embedding-endpoint>
+AI_GATEWAY_EMBED_MODEL=<embedding-endpoint>
+
+# OpenAI direct (optional fallback)
+OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
+
+# Anthropic (optional, for Demo 1.6)
+ANTHROPIC_API_KEY=<YOUR_ANTHROPIC_API_KEY>

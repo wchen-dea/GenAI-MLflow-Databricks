@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    run_12_crewai:
+      name: 12-crewai-multi-agent
+      tasks:
+      - task_key: run_notebook
+        notebook_task:
+          notebook_path: ../src/notebooks/12_crewai_multi_agent.ipynb
+          source: WORKSPACE
